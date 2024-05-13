@@ -26,6 +26,18 @@ const TextGroup = styled.div`
 const Paragraph = styled.p`
     margin: 5px 0; 
 `
+const scrollToTop = () => {
+    window.scrollTo({
+      top: 0, // 맨 위로 스크롤
+      behavior: 'smooth' // 부드러운 스크롤 효과
+    });
+  };
+
+  const BackTotop = styled.span`
+    color: blue;
+    cursor: pointer;
+  `
+
 
 const Footer = ()=>{
     return(
@@ -39,7 +51,7 @@ const Footer = ()=>{
             New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">getting started guide</a>.
             </Paragraph>
             </TextGroup>
-            <span>Back to top</span>
+            <BackTotop onClick={scrollToTop}>Back to top</BackTotop>
         </FooterDetail>
     </FooterBox>
     )

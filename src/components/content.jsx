@@ -47,9 +47,14 @@ const ButtonGroup = styled.div`
 `
 
 const Button = styled.button`
-    background-color: white;
+    background-color: #f8f9fa;
     padding:7px;
     border-radius: 2px;
+`
+
+const Mintime = styled.span`
+    font-size: 15px;
+    color:#212529; 
 `
 
 const Content = ()=>{
@@ -86,7 +91,7 @@ const Card = ()=>{
                     <Button>Edit</Button>
                 </ButtonGroup>
 
-                <span>9 min</span>
+                <Mintime>9 min</Mintime>
             </FootWrapper>
         </CardWrapper>
     )

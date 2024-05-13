@@ -26,9 +26,14 @@ const MyButton = styled.button`
     border-radius: 4px;
     font-size: 1rem;
     border: 1px solid lightgray;
-
+    cursor: pointer;
+    
     color:${(props) => props.color ||"black"};
     background-color: ${(props)=>props.backgroundColor||"white"};
+    &:hover {
+        background-color: ${(props) => props.hoverBackgroundColor || "lightgray"}; 
+        color: ${(props) => props.hoverColor || "white"}; 
+    }
 `
 
 const ButtonGroup = styled.div`
@@ -47,8 +52,8 @@ const Banner = () =>{
             <Text>Something short and leading about the collection below—its contents, the creator, etc. 
                 Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</Text>
                 <ButtonGroup>
-                <MyButton color={"white"} backgroundColor={"#007bff;"}>Main call to action</MyButton>
-                <MyButton color={"white"} backgroundColor={"#6c757d;"}>Secondary action</MyButton>
+                <MyButton color={"white"} backgroundColor={"#007bff;"} hoverBackgroundColor={"#005ec3"}>Main call to action</MyButton>
+                <MyButton color={"white"} backgroundColor={"#6c757d;"} hoverBackgroundColor={"#5e6d7a"}>Secondary action</MyButton>
             </ButtonGroup>
         </Wrapper>
     );
